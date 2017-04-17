@@ -206,9 +206,9 @@
             // PowerPictureBox
             // 
             this.PowerPictureBox.Image = global::SlotMachine.Properties.Resources.powerbutton;
-            this.PowerPictureBox.Location = new System.Drawing.Point(25, 105);
+            this.PowerPictureBox.Location = new System.Drawing.Point(34, 105);
             this.PowerPictureBox.Name = "PowerPictureBox";
-            this.PowerPictureBox.Size = new System.Drawing.Size(56, 45);
+            this.PowerPictureBox.Size = new System.Drawing.Size(69, 61);
             this.PowerPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.PowerPictureBox.TabIndex = 15;
             this.PowerPictureBox.TabStop = false;
@@ -217,9 +217,9 @@
             // ResetPictureBox
             // 
             this.ResetPictureBox.Image = global::SlotMachine.Properties.Resources.reset;
-            this.ResetPictureBox.Location = new System.Drawing.Point(369, 105);
+            this.ResetPictureBox.Location = new System.Drawing.Point(353, 105);
             this.ResetPictureBox.Name = "ResetPictureBox";
-            this.ResetPictureBox.Size = new System.Drawing.Size(50, 45);
+            this.ResetPictureBox.Size = new System.Drawing.Size(64, 61);
             this.ResetPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.ResetPictureBox.TabIndex = 14;
             this.ResetPictureBox.TabStop = false;
@@ -230,7 +230,7 @@
             this.SpinPictureBox.Image = global::SlotMachine.Properties.Resources.spin;
             this.SpinPictureBox.Location = new System.Drawing.Point(307, 435);
             this.SpinPictureBox.Name = "SpinPictureBox";
-            this.SpinPictureBox.Size = new System.Drawing.Size(59, 49);
+            this.SpinPictureBox.Size = new System.Drawing.Size(62, 50);
             this.SpinPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.SpinPictureBox.TabIndex = 13;
             this.SpinPictureBox.TabStop = false;
