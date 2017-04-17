@@ -1,10 +1,10 @@
-﻿/// <summary>
-/// APP NAME : Slot Machine
-/// AUTHOR : Preetinder Singh Brar
-/// STUDENT NUMBER : 200334111
-/// CREATE DATE : 17 April 2017
-/// DESCRIPTION : The program that simulates a slot machine.
-/// </summary>
+﻿/*
+APP NAME : Slot Machine
+NAME : Rutul Shah
+STUDENT NO : #200329341
+CREATE DATE : 17 April 2017
+DESCRIPTION : The program shows working of any slot machine.
+*/
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -21,7 +21,7 @@ namespace SlotMachine
 {
     public partial class SlotMachineForm : Form
     {
-        //PRIVATE VARIABLES ***************************************************
+        //PRIVATE VARIABLES
         private int playerMoney = 100;
         private int winnings = 0;
         private int jackpot = 5000;
@@ -50,9 +50,9 @@ namespace SlotMachine
             updateTextBoxes();
         }
 
-        /// <summary>
-        /// Helper method to update all text boxes
-        /// </summary>
+        
+        //method which updates all textboxes
+        
         private void updateTextBoxes()
         {
             WinnerTextBox.Text = winnings.ToString("C", CultureInfo.CurrentCulture);
@@ -196,6 +196,7 @@ namespace SlotMachine
                 }
 
             }
+
             Slot1PictureBox.Image = (Image)Properties.Resources.ResourceManager.GetObject(betLine[0].ToLower());
             Slot2PictureBox.Image = (Image)Properties.Resources.ResourceManager.GetObject(betLine[1].ToLower());
             Slot3PictureBox.Image = (Image)Properties.Resources.ResourceManager.GetObject(betLine[2].ToLower());
@@ -283,11 +284,9 @@ namespace SlotMachine
 
         }
 
-        /// <summary>
-        /// Event handler to spin the reels on spin picture box click
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
+       
+        // To Spin the reels onclick 
+     
         private void SpinPictureBox_Click(object sender, EventArgs e)
         {
             if (playerMoney == 0)
@@ -317,39 +316,28 @@ namespace SlotMachine
             }
             updateTextBoxes();
         }
-
-        /// <summary>
-        /// event handler to exit the application on exit picture box click
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
+      
+        // onclick event to exit the application
         private void powerPictureBox_Click(object sender, EventArgs e)
         {
             this.Close();
         }
 
-        /// <summary>
-        /// event handler to reset everything on reset picture box click
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
+        // onclick event to reset everything
         private void resetPictureBox_Click(object sender, EventArgs e)
         {
             this.resetAll();
             updateTextBoxes();
         }
 
-        /// <summary>
-        /// event handler to set bet value based on the bet picture box click
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
+       
+        // event handler to set bet value based on the bet picture box click
         private void BetPictureBox_Click(object sender, EventArgs e)
         {
             PictureBox pictureBox = sender as PictureBox;
             if (Convert.ToInt32(pictureBox.Tag) > playerMoney)
             {
-                MessageBox.Show("Selected bet is greater than player money");
+                MessageBox.Show("You don't have enough money to place your BET","NOT ENOUGH FUNDS",MessageBoxButtons.OK,MessageBoxIcon.Information);
                 return;
             }
             playerBet = Convert.ToInt32(pictureBox.Tag);
